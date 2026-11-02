@@ -1,0 +1,10 @@
+With random_state=42:
+ It is like recording a video
+ of a perfect shuffle and replaying that exact same shuffle every single time. 
+Your data splits the exact same way, and your accuracy stays consistent.
+
+When you "stratify" your data during a 
+train-test split, you are telling the
+ computer:"Make sure my Training Set 
+and my Testing Set have the exact same
+ percentage of categories as my original data pool."

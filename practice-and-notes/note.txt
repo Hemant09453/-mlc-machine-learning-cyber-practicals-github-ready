@@ -1,0 +1,11 @@
+  Learning Resources:
+
+·               Emmanuel Tsukerman, Machine Learning for Cybersecurity Cookbook, Packt Publishing.
+
+·               Aihua Liu, Applied Machine Learning for Cybersecurity, Springer.
+
+·               IIT-Kharagpur Virtual Labs.
+
+·               Scikit-learn, Pandas, NumPy, Matplotlib official documentation.
+
+·               Kaggle, UCI ML Repository, NSL-KDD/KDD Cup datasets.

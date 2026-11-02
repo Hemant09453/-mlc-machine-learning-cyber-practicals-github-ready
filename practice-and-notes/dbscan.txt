@@ -1,0 +1,60 @@
+DBSCAN is a density-based clustering algorithm that offers several advantages. 
+It does not require the number of clusters to be specified in advance. It can
+ identify clusters of arbitrary shapes and can effectively handle noisy data. DBSCAN 
+ can explicitly detect outliers by assigning them the label -1. It is also useful for anomaly
+ detection applications such as intrusion detection and fraud detection.
+ 
+ Remember N-N-S-A:
+
+N → No need to specify number of clusters
+N → Noise/outliers can be detected
+S → Supports different cluster Shapes
+A → Useful for Anomaly detection
+ 
+ Advantages of DBSCAN
+ 1. No need to specify number of clusters
+ 2. Detects noise and outliers
+3. Can find irregular-shaped clusters
+4. Works well with noisy data
+ 5. Based on density
+6. Useful for anomaly detection
+
+ Normal traffic → Dense cluster
+Normal traffic → Dense cluster
+Attack traffic → Isolated points
+
+ Applications include:
+Intrusion detection
+Fraud detection
+Network anomaly detection
+Unusual user behavior detection
+Sensor anomaly detection
+-----------------------------------------------code----------------------------------
+ import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import DBSCAN
+
+# Sample data
+X = np.array([
+    [1, 2], [1.5, 1.8], [2, 2],
+    [8, 8], [8.5, 8], [9, 8.5],
+    [20, 20]
+])
+
+# Create DBSCAN model
+model = DBSCAN(eps=1.5, min_samples=2)
+
+# Fit the model
+labels = model.fit_predict(X)
+
+print("Cluster labels:", labels)
+
+# Plot clusters
+plt.scatter(X[:, 0], X[:, 1], c=labels)
+
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("DBSCAN Clustering")
+plt.show()
+
+-----------------------------
